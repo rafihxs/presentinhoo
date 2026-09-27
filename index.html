@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#08090d" />
+  <title>Gaby — até chegar em nós</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+  <header class="topbar">
+    <button class="brand" id="brandSecret" aria-label="Segredo">G <span>×</span> R</button>
+    <div class="progress-wrap"><span id="progressText">0 / 8 fragmentos</span><div class="progress"><i id="progressBar"></i></div></div>
+    <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema"><span class="theme-icon">◐</span><span id="themeName">Super escuro</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">04.01.2026 — continua...</p>
+      <h1>Tem coisas que eu não queria<br><em>deixar presas dentro de mim.</em></h1>
+      <p class="hero-copy">Então eu transformei o que eu senti nesses últimos tempos em pequenos fragmentos. Não precisa ler tudo de uma vez. Só toca quando quiser.</p>
+      <button class="primary" id="startBtn">começar devagar <span>↓</span></button>
+    </section>
+
+    <section class="chapter" id="fragmentos">
+      <div class="section-title"><span>01</span><div><p>FRAGMENTOS</p><h2>Primeiro a dica. Depois, o que eu nunca quero esconder de você.</h2></div></div>
+      <div class="cards" id="cards"></div>
+    </section>
+
+    <section class="between" id="between">
+      <p>Às vezes amar não parece uma cena perfeita.</p>
+      <h2>Às vezes é só duas pessoas cansadas<br>decidindo não soltar a mão.</h2>
+      <div class="pulse-line"><i></i><span>nós ainda estamos aqui</span><i></i></div>
+    </section>
+
+    <section class="game-section locked" id="gameSection">
+      <div class="lock-layer" id="lockLayer"><span>✦</span><strong>Um último lugar está esperando.</strong><small>Revele os 8 fragmentos para abrir.</small></div>
+      <div class="section-title"><span>02</span><div><p>MINIJOGO</p><h2>Do cansaço até “Nós”.</h2></div></div>
+      <p class="game-intro">Alguns sentimentos pesam. A ideia aqui não é apagar nenhum deles — é atravessá-los juntos. Leve cada fragmento até o centro e descubra o que fica quando eles param de lutar sozinhos.</p>
+      <div class="game-board" id="gameBoard">
+        <div class="orbit" id="orbit"></div>
+        <button class="us-core" id="usCore"><span>NÓS</span><small id="coreCount">0 / 6</small></button>
+      </div>
+      <p class="game-tip" id="gameTip">Toque em um sentimento e depois em “NÓS”.</p>
+      <div class="finale" id="finale" hidden>
+        <p class="eyebrow">VOCÊ CHEGOU ATÉ AQUI</p>
+        <h2>Eu não quero uma vida sem dificuldades.<br><em>Eu quero uma vida em que a gente continue escolhendo um ao outro.</em></h2>
+        <button class="primary" id="finalLetterBtn">abrir a última carta</button>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="messageDialog" class="message-dialog">
+    <button class="close" id="closeDialog" aria-label="Fechar">×</button>
+    <div class="dialog-index" id="dialogIndex">01</div>
+    <p class="dialog-kicker" id="dialogKicker">DICA</p>
+    <h2 id="dialogTitle"></h2>
+    <p id="dialogText"></p>
+    <button class="reveal-btn" id="revealBtn">revelar o que existe por trás →</button>
+    <div class="secret-message" id="secretMessage"></div>
+  </dialog>
+
+  <dialog id="letterDialog" class="letter-dialog">
+    <button class="close" id="closeLetter" aria-label="Fechar">×</button>
+    <p class="eyebrow">PARA GABY</p>
+    <h2>Quando eu penso no depois...</h2>
+    <div class="letter-text">
+      <p>Eu não penso em uma vida perfeita. Penso em você nela.</p>
+      <p>Penso na saudade acabando quando eu finalmente puder te ver, te abraçar e sentir que por alguns minutos o mundo inteiro pode ficar do lado de fora.</p>
+      <p>Penso em casamento. Penso em filhos. Penso na nossa família, nas coisas pequenas da casa, nas nossas implicâncias, nas risadas e até nos dias em que os dois vão estar cansados demais. E, estranhamente, quanto mais o tempo passa, mais esse pensamento cresce em mim.</p>
+      <p>Eu sei que minhas atitudes nem sempre mostraram a segurança que eu queria te dar. Por isso eu não quero que essa carta seja uma promessa bonita e vazia. Quero aprender a amar você também nas minhas atitudes: ouvindo melhor, respeitando seu espaço, cuidando do meu medo e não colocando nas suas costas aquilo que é meu.</p>
+      <p>Mesmo quando eu também atravesso dias difíceis, existe uma coisa que continua muito clara: com você eu me sinto amado, seguro e acolhido. E eu quero devolver isso para você de uma forma cada vez melhor.</p>
+      <p><strong>Eu estou morrendo de saudade de você, Gaby. E ainda quero chegar em muitos “nós” ao seu lado.</strong></p>
+    </div>
+    <div class="signature">— rafihx <span>♡</span></div>
+  </dialog>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
